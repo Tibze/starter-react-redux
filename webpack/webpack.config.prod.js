@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const WebpackStrip = require('webpack-strip');
 const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const TARGET = process.env.npm_lifecycle_event;
 const APP_DIR = path.resolve(__dirname, '../src/');
@@ -49,6 +50,12 @@ var config = {
     dns: 'empty'
   },
   plugins: [
+    new CleanWebpackPlugin(['dist'], {
+      root: path.resolve(__dirname, '../'),
+      verbose: true,
+      dry: false,
+      exclude: []
+    }),
     new webpack.ProvidePlugin({
       fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     }),
