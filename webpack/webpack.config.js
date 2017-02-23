@@ -8,6 +8,8 @@ const TARGET = process.env.npm_lifecycle_event;
 const APP_DIR = path.resolve(__dirname, '../src/');
 const BUILD_DIR = path.resolve(__dirname, '../public/');
 
+const conf = require('../config/config.json');
+
 var config = {
   context: APP_DIR,
   entry: './index.js',
@@ -61,9 +63,13 @@ var config = {
       }
     }),
     new HtmlWebpackPlugin({
-      title: 'Custom template',
+      title: conf.dev.meta.title,
+      description: conf.dev.meta.description,
+      image: conf.dev.meta.image,
+      url: conf.dev.url,
+      ua: conf.dev.ua,
       template: '../static/index.ejs', // Load a custom template (ejs by default see the FAQ for details)
-    })    
+    })
   ],
   output: {
     path: BUILD_DIR,

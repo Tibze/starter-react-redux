@@ -10,6 +10,8 @@ const BUILD_DIR = path.resolve(__dirname, '../dist/');
 const BUILD_IMAGES = './assets/images/';
 const BUILD_SVG = './assets/svg/';
 
+const conf = require('../config/config.json');
+
 var config = {
   context: APP_DIR,
   entry: './index.js',
@@ -63,7 +65,11 @@ var config = {
         }
     }),
     new HtmlWebpackPlugin({
-      title: 'Custom template',
+      title: conf.prod.meta.title,
+      description: conf.prod.meta.description,
+      image: conf.prod.meta.image,
+      url: conf.prod.url,
+      ua: conf.prod.ua,
       template: '../static/index.ejs', // Load a custom template (ejs by default see the FAQ for details)
     })
   ],
