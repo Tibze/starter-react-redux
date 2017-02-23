@@ -1,6 +1,6 @@
 # Starter React / Redux
 
-Simple starter for working with Recat and Redux.
+Simple starter for working with React and Redux.
 Compile by Webpack
 
 ### Installation
