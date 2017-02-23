@@ -25,6 +25,7 @@ class Home extends React.Component {
 
   componentDidMount() {
     console.log('Home::componentDidMount');
+    console.log(process.env.api);
   }
 
   componentWillUnmount() {
@@ -38,6 +39,7 @@ class Home extends React.Component {
     return (
     	<div className='container view'>
         <h2 className='title has-text-centered'>{state.defaultMessage}</h2>
+        <p>{process.env.api}</p>
       </div>
     );
   }

@@ -58,9 +58,7 @@ var config = {
       fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('development')
-      }
+      'process.env': JSON.stringify(conf.dev)
     }),
     new HtmlWebpackPlugin({
       title: conf.dev.meta.title,

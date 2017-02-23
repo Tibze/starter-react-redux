@@ -53,9 +53,7 @@ var config = {
       fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     }),
     new webpack.DefinePlugin({
-      'process.env': {
-        'NODE_ENV': JSON.stringify('production')
-      }
+      'process.env': JSON.stringify(conf.prod)
     }),
     new webpack.optimize.UglifyJsPlugin({
         comments: false,

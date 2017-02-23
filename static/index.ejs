@@ -16,10 +16,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
   </head>
   <body>
+    <%if (htmlWebpackPlugin.options.ua !== '') { %>
     <script>
         window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
         ga('create',<%= htmlWebpackPlugin.options.ua %>,'auto');ga('send','pageview')
     </script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <% } %>
   </body>
 </html>
