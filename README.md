@@ -20,4 +20,8 @@ npm run build
 
 ### Tests
 
-Coming soon
+With Jest
+
+```sh
+npm test
+```
