@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`header renders correctly 1`] = `
+<div>
+  <nav
+    className="container nav"
+  >
+    <div
+      className="nav-left"
+    >
+      <h1
+        className="title nav-title"
+      >
+        React / Redux
+      </h1>
+    </div>
+    <span
+      className="nav-toggle"
+    >
+      <span />
+      <span />
+      <span />
+    </span>
+    <div
+      className="nav-right nav-menu"
+    >
+      <a
+        className="nav-item"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Home
+      </a>
+      <a
+        className="nav-item"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        About
+      </a>
+      <a
+        className="nav-item"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Contact
+      </a>
+      <a
+        className="nav-item"
+        onClick={[Function]}
+        style={Object {}}
+      >
+        Settings
+      </a>
+    </div>
+  </nav>
+</div>
+`;
